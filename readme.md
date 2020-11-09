@@ -79,6 +79,6 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 <img src="images/dummy-plaatje.svg" width="375px" alt="omschrijving van de pagina">
 
-**Screenshot(s) van de tweede pagina (small screen):**
+**Screenshot(s) van de tweede pagina (sma4ll screen):**
 
 <img src="images/dummy-plaatje.svg" width="375px" alt="omschrijving van de pagina">
