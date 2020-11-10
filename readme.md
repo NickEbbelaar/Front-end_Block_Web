@@ -73,7 +73,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Je focus:** -surface plane-
 
-**Je opdracht:** -https://trendfactory.store/-
+**Je opdracht:** https://trendfactory.store/
 
 **Screenshot(s) van de eerste pagina (small screen):**
 
