@@ -62,9 +62,9 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Breakdownschets (week 1)
 
-<img src="images/hoofdstructuur.JPG">
-<img src="images/details1.JPG">
-<img src="images/details2.JPG">
+<img src="images/hoofdstructuur.jpg">
+<img src="images/detail1.jpg">
+<img src="images/details2.jpg">
 
 
 
