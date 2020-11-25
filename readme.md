@@ -38,7 +38,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Stand van zaken
 
--dit ging goed & dit was lastig-
+-Nu nog maar een klein beetje HTML CSS van het het eerste gedeelte van de website. Ik dacht dat dit heel moeilijk zou zijn maar dit verliep tot nu toe heel soepel. -
 
 **Screenshot(s):**
 
