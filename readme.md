@@ -50,8 +50,8 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 | Nick     | Redouane         | Wessel    | Ugur        |
 | ---            | ---                | ---          | ---              |
-| Nav aan de bovekant laten plakken  | en dit             | en ik dit    | en dan ik dat    |
-  | nog een punt | dit wil ik zeker |
+| Nav aan de bovekant laten plakken  |Vragen vooraf             | Hoe maak je een slideshow | en dan ik dat    |
+|Of mijn code semantisch correct| | Meer resultaten
 | ...            | ...                | ...          | ...              |
 
 ### Verslag van meeting
