@@ -23,7 +23,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 
 ## Voortgang 3 (week 6)
-
+- De screenreader werkt voor wat ik tot nu toe heb gemaakt vrij goed. Alle knoppen worden duidelijk verteld en de tekst wordt ook beschreven als ik met tab overal langs ga -
 -same as voortgang 1-
 
 
@@ -71,7 +71,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 ## Intake (week 1)
 -uitwerken voor de kick-off werkgroep - begin van de eerste week-
 
-**Je startniveau:** -rood-
+**Je startniveau:** -blauw-
 
 **Je focus:** -surface plane-
 
