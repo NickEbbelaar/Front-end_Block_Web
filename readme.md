@@ -30,7 +30,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Voortgang 2 (week 5)
 
--same as voortgang 1-
+Ik heb de code wat netter gemaakt en tijdens het voortgang gesprek met sanne afgewerkt.
 
 
 
@@ -38,7 +38,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Stand van zaken
 
--Nu nog maar een klein beetje HTML CSS van het het eerste gedeelte van de website. Ik dacht dat dit heel moeilijk zou zijn maar dit verliep tot nu toe heel soepel. -
+Nu nog maar een klein beetje HTML CSS van het het eerste gedeelte van de website. Ik dacht dat dit heel moeilijk zou zijn maar dit verliep tot nu toe heel soepel.
 
 **Screenshot(s):**
 
