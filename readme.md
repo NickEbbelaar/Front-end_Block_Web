@@ -14,7 +14,11 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Eindgesprek (week 7/8)
 
--dit ging goed & dit was lastig-
+Het wegwerken van alle ID's en Divs die ik in het begin had gebruikt was vrij lastig, het kosten namelijk aardig wat tijd. Ook had ik moeite met de overflow-x, het zou heel simpel moeten zijn maar toch mislukte er steeds iets. Dit is ook niet gelukt uiteindelijk, dit is de zien bij de 'RECENTLY VIEWED.'
+
+Mijn site is zeker nog niet af en er moeten nog aardig wat dingen worden toegevoegd, zo ook de javascript. 
+
+Dit wil ik graag in de herkansing helemaal afhebben.
 
 **Screenshot(s):**
 
@@ -28,7 +32,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 <img src="images/screen5.JPG">
 
--screenshot(s) van je eindresultaat-
+
 
 
 
