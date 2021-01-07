@@ -18,6 +18,16 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Screenshot(s):**
 
+<img src="images/screen1.jpg">
+
+<img src="images/screen2.jpg">
+
+<img src="images/screen3.jpg">
+
+<img src="images/screen4.jpg">
+
+<img src="images/screen5.jpg">
+
 -screenshot(s) van je eindresultaat-
 
 
