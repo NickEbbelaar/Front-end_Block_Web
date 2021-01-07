@@ -20,6 +20,8 @@ Mijn site is zeker nog niet af en er moeten nog aardig wat dingen worden toegevo
 
 Dit wil ik graag in de herkansing helemaal afhebben.
 
+Voor nu zou ik graag wat vragen willen stellen over de foute die er nu in de code zitten zodat ik dit kan oplossen en feedback kan krijgen op mijn code.
+
 **Screenshot(s):**
 
 <img src="images/screen1.JPG">
