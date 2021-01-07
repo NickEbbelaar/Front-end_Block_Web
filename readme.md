@@ -18,15 +18,15 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Screenshot(s):**
 
-<img src="images/screen1.jpg">
+<img src="images/screen1.JPG">
 
-<img src="images/screen2.jpg">
+<img src="images/screen2.JPG">
 
-<img src="images/screen3.jpg">
+<img src="images/screen3.JPG">
 
-<img src="images/screen4.jpg">
+<img src="images/screen4.JPG">
 
-<img src="images/screen5.jpg">
+<img src="images/screen5.JPG">
 
 -screenshot(s) van je eindresultaat-
 
