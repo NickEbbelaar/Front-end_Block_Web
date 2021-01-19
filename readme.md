@@ -39,7 +39,7 @@ Voor nu zou ik graag wat vragen willen stellen over de foute die er nu in de cod
 
 
 ## Voortgang 3 (week 6)
-- De screenreader van de officele website is naar mijn idee helemaal compleet, ik kon namelijk geen onduidelijkheden vinden. Bij mijn eigen website vondt ik het ook goed werken, het was namelijk te volgen. Vervelend was wel dat hij soms onnodige informatie bij een element afspeelden en na de volgende klik pas de juiste informatie waardoor je twee keer moest klikken. Buiten dat verteld de screenreader wel alle informatie en zou je het dus blind de website kunnen bezoeken.
+De screenreader van de officele website is naar mijn idee helemaal compleet, ik kon namelijk geen onduidelijkheden vinden. Problemen verhelpen heb ik dan ook niet kunnen doen. Bij mijn eigen website vondt ik het ook goed werken, het was namelijk te volgen. Vervelend was wel dat hij soms onnodige informatie bij een element afspeelden en na de volgende klik pas de juiste informatie waardoor je twee keer moest klikken. Buiten dat verteld de screenreader wel alle informatie en zou je het dus blind de website kunnen bezoeken.
 
 
 
