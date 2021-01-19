@@ -39,8 +39,7 @@ Voor nu zou ik graag wat vragen willen stellen over de foute die er nu in de cod
 
 
 ## Voortgang 3 (week 6)
-- De screenreader werkt voor wat ik tot nu toe heb gemaakt vrij goed. Alle knoppen worden duidelijk verteld en de tekst wordt ook beschreven als ik met tab overal langs ga -
--same as voortgang 1-
+- De screenreader werkt voor wat ik tot nu toe heb gemaakt vrij goed. Alle knoppen worden duidelijk verteld en de tekst wordt ook beschreven als ik met tab overal langs ga
 
 
 
