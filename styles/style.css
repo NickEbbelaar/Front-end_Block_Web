@@ -1,6 +1,3 @@
-/* CSS Document */
-
-
 *, *::after, *::before {
   box-sizing:border-box;
   padding: 0;
@@ -9,25 +6,34 @@
   list-style: none;
 }
 
+/* Styling voor gehele body*/
 body {
   font-family: montserrat;
   background-color: #F3F5F6;
 }
 
-body > header section {
-  height: 33px;
-  background-color: #00BADB;
+/* Laat de header plakken aan de bovenkant (bug)*/
+body > header {
+  position: sticky;
+  top: -33px;
+
 }
 
-body > header section h6 {
+
+/* De top bar aan de bovenkant*/
+body > header > p {
   padding: 8px 0;
   font-size: 13px;
-color: white;
-text-align: center;
-font-family: sans-serif;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  margin: 0;
+  height: 33px;
+  background-color: #00BADB;
 
 }
 
+/* De gehele navigatie*/
 body > header nav {
 display: flex;
 align-items: center;
@@ -36,83 +42,217 @@ height: 4em;
 padding: 0 1em;
 }
 
-body > header nav button {
-  height: 1.4em;
-  width: 1.4em;
-  border: none;
-  appearance: none;
-  background: none;
-  cursor: pointer;
-  transition: all .5s ease-in-out;
-
-}
-
-body > header nav button img {
-width: 100%;
-height: auto;
-
-}
-
+/* Dit is het logo */
 body > header nav > a {
   width: 10em;
   display: block;
   margin-left: .5em;
 }
-
+/* De afbeelding van het logo en de link*/
 body > header nav > a img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-body > header nav > ul {
+/* dit is de hamburger menu knop */
+button.menu-btn {
+  order: -1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px; /* stiekem 48 volgens hci */
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Styling voor het hamburger menu knop (de drie streepjes)*/
+button.menu-btn span,
+button.menu-btn::before,
+button.menu-btn::after {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: all .5s ease-in-out;
+}
+
+/* Het eerste streepje van het menu dat naar boven is geplaatst*/
+button.menu-btn::before {
+  transform: translateY(-7px);
+}
+/* Het laatste streepje van het menu dat naar onder is geplaatst*/
+button.menu-btn::after {
+  transform: translateY(7px);
+}
+
+/* Zorgt ervoor dat het middelste streepje naar links schuift als er geklikt wordt*/
+nav.open button.menu-btn span {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+/* Zorgt ervoor dat het bovenste streepje naar onder draait */
+nav.open button.menu-btn::before {
+  transform: rotate(45deg);
+}
+
+/* Zorgt ervoor dat het onderste streepje naar boven draait */
+nav.open button.menu-btn::after {
+  transform: rotate(-45deg);
+}
+
+/* dit is het hoofdmenu (nog niet te zien)*/
+body > header nav > ul:first-of-type {
+  background-color: white;
+  position: fixed;
+  top: 97px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transform: scale(.8);
+  transition: .3s;
+  pointer-events: none;
+}
+
+/* Het pijltje aan de bovenkant van het menu*/
+body > header nav > ul:first-of-type::before {
+  content: "";
+  position: absolute;
+  height: .6em;
+  width: 1.2em;
+  background-color: white;
+  top: -.6em;
+  left: calc(.45em + 15px);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%, 50% 0);
+}
+
+/* Het menu wanneer er op de knop geklikt is */
+body > header nav.open > ul:first-of-type{
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+/* Positionering voor de li elementen in het menu */
+body > header nav.open > ul:first-of-type li {
+  margin: 2em 0 0 1.5em;
+}
+
+/* De styling voor de linkjes */
+body > header nav.open > ul:first-of-type li a {
+  color: #7B848A;
+}
+
+/* dit zijn de utility icons */
+body > header nav > ul:last-of-type {
   display: flex;
   margin-left: auto;
-
 }
 
-body > header nav > ul li{
+/* dit zijn de utility icons */
+body > header nav > ul:last-of-type li{
 margin-left: .6em;
-
 }
 
-body > header nav > ul a {
+/* dit zijn de utility icons */
+body > header nav > ul:last-of-type button {
   height: 2em;
   width:  2em;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  appearance: none;
+  background: none;
+  border: none;
 }
 
-body > header nav > ul a img {
+/* dit zijn de afbeeldingen van de utility icons */
+body > header nav > ul:last-of-type button img {
   height: auto;
-  width: 1.4em;
+  width: 1.6em;
 }
 
+/* Het zoekform (nog niet zichtbaar) */
+body > header nav form {
+  background-color: #1E2D7D;
+  position: fixed;
+  top: 97px;
+  left: 0;
+  right: 1em;
+  bottom: 680px;
+  transform: translateY(-4em);
+  opacity: 0;
+  transition: .3s;
+  pointer-events: none;
+  text-align: center;
+  justify-content: center;
+  z-index: -1;
+}
 
-main section:first-of-type {
+/* Het zoekform wel zichtbaar */
+body > header nav.open2 form {
+  opacity: 1;
+transform: translateY(0);
+pointer-events: auto;
+}
+
+/* het zoekveld */
+body > header nav form input {
+  width: 65%;
+  padding: .8em 0 .8em 0;
+  border-radius: 4px;
+  border: 1px solid white;
+  margin: 1em 0 1em 0;
+  color: #7B848A;
+}
+
+/* de zoek knop */
+body > header nav form a {
+color: white;
+background-color: #00BADB;
+padding:.6em;
+border-radius: 4px;
+margin: 1em 0 1em 0;
+}
+
+/* main */
+
+/* showcase met afbeelding */
+#home main section:first-of-type {
 min-height: 450px;
   background: url('../images/showcase.jpg');
   background-size: cover;
   background-position: center;
   text-align: center;
   color: white;
-
 }
 
-main section:first-of-type h1 {
+/* Titel in de showcase */
+#home main section:first-of-type h1 {
   padding-top: 150px;
   font-size: 21px;
 }
 
-main section:first-of-type p {
+/* Tekst in de showcase */
+#home main section:first-of-type p {
   padding-top:20px;
   font-size: 14px;
   margin-bottom: 30px;
 }
 
-main section:first-of-type a {
+/* De knop in de showcase */
+#home main section:first-of-type a {
   color: #fff;
   font-size: 14px;
   font-family: poppins;
@@ -121,13 +261,14 @@ main section:first-of-type a {
 }
 
 
-/* DE 3 PROMO BOXEN */
-main section:nth-of-type(2) {
+/* De 3 collection boxen */
+#home main section:nth-of-type(2) {
   display: flex;
   overflow-x: auto;
 }
 
-main section:nth-of-type(2) ul li {
+/* De 3 verschillende boxen */
+#home main section:nth-of-type(2) ul li {
   flex-shrink: 0;
   border-radius: .2em;
   margin: 2.5em 0 0 1.3em;
@@ -135,26 +276,31 @@ main section:nth-of-type(2) ul li {
   width: 18.7em;
 }
 
-main section:nth-of-type(2) ul li:first-of-type {
+/* box Gadgets */
+#home main section:nth-of-type(2) ul li:first-of-type {
   background-color: #6F42EF;
 }
 
-main section:nth-of-type(2) ul li:nth-of-type(2) {
+/* box Pets */
+#home main section:nth-of-type(2) ul li:nth-of-type(2) {
   background-color: #FC2A68;
 }
 
-main section:nth-of-type(2) ul li:last-of-type {
+/* box Cleaning */
+#home main section:nth-of-type(2) ul li:last-of-type {
   background-color: #26C1CE;
 }
 
-main section:nth-of-type(2) h4 {
+/* De h4 in alle boxen */
+#home main section:nth-of-type(2) h4 {
   color: #fff;
   font-size: 18px;
   padding-top: 1.5em;
   padding-left: 1.7em;
 }
 
-main section:nth-of-type(2) p {
+/* De p in alle boxen */
+#home main section:nth-of-type(2) p {
   color: #fff;
   font-size: 14px;
   padding-top: 1em;
@@ -163,7 +309,8 @@ main section:nth-of-type(2) p {
   margin-right: 1em;
 }
 
-main section:nth-of-type(2) a {
+/* de a in alle boxen */
+#home main section:nth-of-type(2) a {
   font-size: 14px;
   font-family: poppins;
   padding: 1em 1.9em;
@@ -172,88 +319,91 @@ main section:nth-of-type(2) a {
   border-radius: .2em;
 }
 
-main section:nth-of-type(2) ul a:first-child {
+/* De text in de knop kleur geven (box 1) */
+#home main section:nth-of-type(2) ul li:first-of-type a{
   color: #6F42EF;
 }
-
-main section:nth-of-type(2) ul a:nth-of-type(2) {
+/* De text in de knop kleur geven (box 2) */
+#home main section:nth-of-type(2) ul li:nth-of-type(2) a {
   color: #FC2A68;
 }
-
-main section:nth-of-type(2) ul a:last-of-type {
+/* De text in de knop kleur geven (box 3) */
+#home main section:nth-of-type(2) ul li:last-of-type a {
   color: #26C1CE;
 }
 
-main section:nth-of-type(3) {
+/* De featured collection titel */
+#home main section:nth-of-type(3) {
  display: flex;
  align-items: center;
  margin-top: 3.2em;
  margin-bottom: 4em;
 }
-main section:nth-of-type(3) h2 {
+/* featured collection  */
+#home main section:nth-of-type(3) h2 {
   color: #1E2D7D;
   font-family: poppins;
   font-size: 19px;
   margin-left: 1.3em;
 }
-
-main section:nth-of-type(3) a {
+/* view all */
+#home main section:nth-of-type(3) a {
   color: #00BADB;
   font-size: 13px;
   margin-left: 7.7em;
 }
 
-main section:nth-of-type(4) ol li {
+/* alle collection boxen*/
+#home main section:nth-of-type(4) ol li {
   border-radius: .2em;
   margin: 1.5em 1.6em;
   height: 15em;
   background-size: cover;
-
 }
 
-main section:nth-of-type(4) ol li:first-of-type {
+/* Tech collection */
+#home main section:nth-of-type(4) ol li:first-of-type {
   background: url('../images/tech.jpg');
   background-size: cover;
-
 }
-
-main section:nth-of-type(4) ol li:nth-of-type(2) {
+/* Garden */
+#home main section:nth-of-type(4) ol li:nth-of-type(2) {
   background: url('../images/garden.jpg');
   background-size: cover;
 }
-
-main section:nth-of-type(4) ol li:nth-of-type(3) {
+/* Outdoor */
+#home main section:nth-of-type(4) ol li:nth-of-type(3) {
   background: url('../images/outdoor.jpg');
   background-size: cover;
 }
-
-main section:nth-of-type(4) ol li:nth-of-type(4) {
+/* Accessories */
+#home main section:nth-of-type(4) ol li:nth-of-type(4) {
   background: url('../images/accessories.jpg');
   background-size: cover;
 }
-
-main section:nth-of-type(4) ol li:last-of-type {
+/* Beauty accessories */
+#home main section:nth-of-type(4) ol li:last-of-type {
   background: url('../images/beauty-accessories.jpg');
   background-size: cover;
 }
 
-
-main section:nth-of-type(4) h4 {
+/* Titel van de boxen */
+#home main section:nth-of-type(4) h4 {
   color: #fff;
   font-size: 18px;
   padding-top: 1.5em;
   padding-left: 1.7em;
 }
-
-main section:nth-of-type(4) p {
+/* Omschrijving van de boxen */
+#home main section:nth-of-type(4) p {
   color: #fff;
   font-size: 14px;
   padding-top: 1em;
   padding-left: 2.3em;
   padding-bottom: 2.5em;
 }
-
-main section:nth-of-type(4) a {
+/* Knop van de boxen */
+#home main section:nth-of-type(4) a {
   color: #000;
   font-size: 14px;
   font-family: poppins;
@@ -263,36 +413,53 @@ main section:nth-of-type(4) a {
   border-radius: .2em;
 }
 
-main section:nth-of-type(5) {
+/* Featured Product titel */
+#home main section:nth-of-type(5) {
  display: flex;
  align-items: center;
  margin-top: 3.2em;
  margin-bottom: 4em;
 }
-
-main section:nth-of-type(5) h2 {
+/* Featured Product titel */
+#home main section:nth-of-type(5) h2 {
   color: #1E2D7D;
   font-family: poppins;
   font-size: 19px;
   margin-left: 1.3em;
 }
-
-main section:nth-of-type(5) a {
+/* view all */
+#home main section:nth-of-type(5) a {
   color: #00BADB;
   font-size: 13px;
   margin-left: 7.7em;
 }
 
-section:nth-of-type(6)  {
+/* Product (Broom) */
+#home section:nth-of-type(6)  {
 background-color: #fff;
 }
-main > section img {
+
+/* De grote image */
+#home main > section img {
   height: auto;
   width: 90%;
   margin: 1em;
 }
 
-main > section > ul li button img {
+/* De lijst van de varianten buttons*/
+#home main > section > ul {
+  display: flex;
+}
+
+/* De styling van de varianten buttons */
+#home main > section:nth-of-type(6) > ul li button {
+  appearance: none;
+  background: none;
+  border: none;
+}
+
+/* Afbeelding in de varianten buttons */
+#home main > section > ul li button img {
   width: 50px;
   border: none;
   appearance: none;
@@ -300,37 +467,30 @@ main > section > ul li button img {
   margin: 1em;
 }
 
-main > section:nth-of-type(6) > ul li button {
-  appearance: none;
-  background: none;
-  border: none;
-
-}
-
-main > section > ul {
-  display: flex;
-}
-
-section:nth-of-type(6) > h2 {
+/* TF© Pet Hair Removal Broom*/
+#home section:nth-of-type(6) > h2 {
   color: #1E2D7D;
   font-family: sans-serif;
   margin-top: 1.3em;
   margin-left: .5em;
 }
 
-section:nth-of-type(6) > h3 {
+/* de sterren */
+#home section:nth-of-type(6) > h3 {
   color: #1E2D7D;
   margin-left: .5em;
   font-size: 22px;
 }
 
-section:nth-of-type(6) > h3 span {
+/* (90)*/
+#home section:nth-of-type(6) > h3 span {
   color: lightgrey;
   font-family: sans-serif;
   font-size: 16px;
 }
 
-section:nth-of-type(6) > P {
+/* Save 15,00 euro */
+#home section:nth-of-type(6) > P {
   text-align: center;
   background-color: red;
   font-family: poppins;
@@ -342,14 +502,16 @@ section:nth-of-type(6) > P {
   padding: .1em;
 }
 
-section:nth-of-type(6) > a {
+/* Trendfactory link */
+#home section:nth-of-type(6) > a {
   color: #00BADB;
   font-family: poppins;
   font-size: 13px;
   margin-left: 1em;
 }
 
-hr {
+/* Lijn */
+#home hr {
   border: none;
   height: 2px;
   background: lightgrey;
@@ -357,7 +519,8 @@ hr {
   align-items: center;
 }
 
-section:nth-of-type(6) > h6 {
+/* color aangwezen */
+#home section:nth-of-type(6) > h6 {
   color: #1E2D7D;
   font-family: poppins;
   font-size: 12px;
@@ -365,27 +528,43 @@ section:nth-of-type(6) > h6 {
 }
 
 
-/* Kleuren buttons */
-main > section:nth-of-type(6) > ul:nth-of-type(2) li button {
+/* De Kleuren buttons */
+#home main > section:nth-of-type(6) > ul:nth-of-type(2) {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 1em;
+
+/* Styling van de Kleuren buttons */
+}
+#home main > section:nth-of-type(6) > ul:nth-of-type(2) li button {
   color: grey;
   padding: 1em 1.5em;
   border-radius: 2px;
   border: 1px solid lightgrey;
-  margin: 1em .4em 0 1em;
+  margin: .5em .5em 0 0em;
   max-width: 100%;
 }
 
-section:nth-of-type(6) h6:nth-of-type(2) {
+/* ACTIVE STATE van de kleuren buttons */
+#home main > section:nth-of-type(6) > ul:nth-of-type(2) li button:focus {
+  background-color: #F0FBFD;
+  outline-color: #00BADB;
+}
+
+/* Price*/
+#home section:nth-of-type(6) h6:nth-of-type(2) {
   margin-top: 3em;
 }
 
-section:nth-of-type(6) h6:nth-of-type(2) span:first-of-type {
+/* 29,95 */
+#home section:nth-of-type(6) h6:nth-of-type(2) span:first-of-type {
   color: red;
   font-size: 22px;
   margin-left: 1.5em;
 }
 
-section:nth-of-type(6) h6:nth-of-type(2) span:last-of-type {
+/* 44,95 */
+#home section:nth-of-type(6) h6:nth-of-type(2) span:last-of-type {
   color: lightgrey;
   font-size: 17px;
   margin-left: 1.5em;
@@ -393,32 +572,43 @@ section:nth-of-type(6) h6:nth-of-type(2) span:last-of-type {
   font-family: monospace;
 }
 
-select {
+/* De dropdwon*/
+#home select {
   padding: 1em 2em;
   border: solid 1px lightgrey;
   border-radius: 2px;
 }
 
-.dropdown {
+/* De dropdown in ACTIVE STATE */
+#home select:focus {
+  background-color: #F0FBFD;
+  outline-color: #00BADB;
+}
+
+/* Positionering van de dropdwon */
+#home .dropdown {
   display: flex;
   margin-top: 2em;
 }
 
-.dropdown h6 {
+/* Quantity */
+#home .dropdown h6 {
   color: #1E2D7D;
   font-family: poppins;
   font-size: 12px;
   margin-left: 1.2em;
 }
 
-.dropdown select {
+/* Styling van de dropdown */
+#home .dropdown select {
   color: #1E2D7D;
   font-family: poppins;
   font-size: 14px;
   margin-left: 1em;
 }
 
-#addtocart {
+/* add to cart knop */
+#home section:nth-of-type(6) > button {
   text-align: center;
   margin: auto;
   display: flex;
@@ -430,7 +620,8 @@ select {
   font-family: poppins;
 }
 
-section:nth-of-type(6) a:nth-of-type(2) {
+/* buty with paypal knop */
+#home section:nth-of-type(6) a:nth-of-type(2) {
   color: #1E2D7D;
   background-color: #FFC520;
   margin: auto;
@@ -438,22 +629,23 @@ section:nth-of-type(6) a:nth-of-type(2) {
   width: 91%;
   height: 3em;
   margin-top: 1em;
+  justify-content: center;
+  align-items: center;
 }
 
-section:nth-of-type(6) a:last-of-type {
+/* more payment options  */
+#home section:nth-of-type(6) a:last-of-type {
   color: #00BADB;
   margin: auto;
   display: flex;
-  /* Vraag?
-  text-align: center;
-  */
   height: 3em;
-  margin: 1em 0 0 8em;
+  margin-top: 2em;
+  justify-content: center;
   padding-bottom: 10em;
-
 }
 
-section:nth-of-type(7) h2 {
+/* Recently viewed titel*/
+#home section:nth-of-type(7) h2 {
   color: #1E2D7D;
   font-family: sans-serif;
   margin-top: 1.3em;
@@ -461,21 +653,36 @@ section:nth-of-type(7) h2 {
   font-size: 19px;
 }
 
-
-section:nth-of-type(8) {
+/* De recently viewed producten */
+#home section:nth-of-type(8) {
   margin: 1em;
   height: 26em;
-  width: 15em;
-
-
+  margin-bottom: 10em;
 }
 
-section:nth-of-type(8) img {
-  width: 13em;
+/* De recently viewed producten */
+#home section:nth-of-type(8) ul {
+  display: flex;
+  overflow-x: auto;
+}
+
+/* De verschillende producten in de recent viewed */
+#home section:nth-of-type(8) ul li {
+  flex-shrink: 0;
+  background-color: white;
+  border: 1px solid lightgrey;
+  flex-shrink: 0;
+  height: 26em;
+}
+
+/* De product afbeelding */
+#home section:nth-of-type(8) img {
+  width: 12em;
   margin: 1em;
 }
 
-section:nth-of-type(8) p:first-of-type {
+/* save 15,00 (rode achtergrond) */
+#home section:nth-of-type(8) p:first-of-type {
   text-align: center;
   background-color: red;
   font-family: poppins;
@@ -487,13 +694,15 @@ section:nth-of-type(8) p:first-of-type {
   padding: .1em;
 }
 
-section:nth-of-type(8) p:nth-of-type(2) {
+/*  Trendfactory*/
+#home section:nth-of-type(8) p:nth-of-type(2) {
   color: grey;
   margin-left: 1em;
   font-size: 13px;
 }
 
-section:nth-of-type(8) p:nth-of-type(3) {
+/* Naam van het product */
+#home section:nth-of-type(8) p:nth-of-type(3) {
   color: #1E2D7D;
   margin-left: 1em;
   margin-top: .7em;
@@ -501,38 +710,436 @@ section:nth-of-type(8) p:nth-of-type(3) {
   font-family: poppins;
 }
 
-section:nth-of-type(8) p:last-of-type {
+/* De prijs */
+#home section:nth-of-type(8) p:last-of-type {
   margin-left: .8em;
   margin-top: .7em;
 }
 
-section:nth-of-type(8) p:last-of-type span:first-of-type {
+/* de prijs in het rood */
+#home section:nth-of-type(8) p:last-of-type span:first-of-type {
   color: red;
   font-size: 17px;
 }
 
-section:nth-of-type(8) p:last-of-type span:last-of-type {
+/* De prijs in het grijs */
+#home section:nth-of-type(8) p:last-of-type span:last-of-type {
   color: grey;
   margin-left: 1em;
   font-size: 13px;
   text-decoration-line: line-through;
 }
 
-/* vraag? */
-section:nth-of-type(8) ul {
-  display: flex;
-  overflow-x: auto;
+/* Footer */
+
+/* De eerste lijn in de footer */
+footer > hr:first-of-type {
+ width: 100%;
+ margin: 0;
+ height: .1em;
+ background-color: lightgrey;
+}
+
+ /* De knoppen in de footer*/
+ footer > button {
+   border: none;
+   appearance: none;
+   background: none;
+   color: #1E2D7D;
+   margin: 2em 0 2em 1.2em;
+   margin-left: 1.2em;
+   font-family: poppins;
+   font-size: 14px;
+ }
+
+ /* De tweede lijn in de footer */
+ footer > hr:nth-of-type(2) {
+   margin: 0;
+   margin-left: 1.7em;
+ }
+
+/* De derde lijn in de footer*/
+ footer > hr:last-of-type {
+   margin: 0;
+   margin-left: 1.7em;
+ }
+
+ /* De titel van de newsletter*/
+ footer > h6 {
+   color: #1E2D7D;
+   margin: 2em 0 2em 1.2em;
+   font-family: poppins;
+   font-size: 14px;
+ }
+
+/* De omschrijving van de newsletter*/
+ footer > p:first-of-type {
+   margin: 2em 0 2em 1.2em;
+   font-size: 13px;
+   color: #677279;
+ }
+
+ /* Het invul veld van de newsletter */
+ footer > input {
+   margin: 0em 1em 0 1.2em;
+   padding: 1.3em 10em 1.3em 1em;
+   justify-content: center;
+   align-items: center;
+   border: 1px solid lightgrey;
+ }
+
+/* De subscribe knop */
+footer > button:last-of-type {
+  color: #fff;
+  font-size: 14px;
+  font-family: poppins;
+  padding: 1em 1.9em;
+  background-color: #00BADB;
+}
+
+/* De copyright tekst*/
+footer > p:nth-of-type(2) {
+  font-size: 12px;
+  color: #677279;
+  margin: 6em 0 1em 1.2em;
+}
+
+/* Powered by Shopify */
+footer > p:last-of-type {
+  font-size: 12px;
+  color: #677279;
+  margin: 1em 0 3em 1.2em;
+}
+
+
+
+
+
+
+
+
+
+
+/* Shop Pagina */
+#shop body > header {
+  position: sticky;
+  top: -33px;
+}
+
+/* top bar*/
+#shop > header > p {
+  padding: 8px 0;
+  font-size: 13px;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  margin: 0;
+  height: 33px;
+  background-color: #00BADB;
+}
+
+/* Navigatie*/
+#shop  > header nav {
+display: flex;
+align-items: center;
+background: #1E2D7D;
+height: 4em;
+padding: 0 1em;
+}
+
+/* Het hamburger menu */
+#shop   > header nav button {
+  height: 1.4em;
+  width: 1.4em;
+  border: none;
+  appearance: none;
+  background: none;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+/* Het Trendfactory Logo*/
+#shop  > header nav button img {
+width: 100%;
+height: auto;
+}
+
+/* De iconen*/
+#shop  > header nav > a {
+  width: 10em;
+  display: block;
+  margin-left: .5em;
 
 }
 
-section:nth-of-type(8) ul li {
+/* De iconen*/
+#shop  > header nav > a img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ul van de iconen*/
+#shop  > header nav > ul:last-of-type {
+  display: flex;
+  margin-left: auto;
+}
+
+/* De list items in de ul's van de nav*/
+#shop  > header nav > ul li{
+margin-left: .6em;
+}
+
+/* De a elementen in de ul's*/
+#shop > header nav > ul a {
+  height: 2em;
+  width:  2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* De iconen*/
+#shop > header nav > ul a img {
+  height: auto;
+  width: 1.4em;
+}
+
+/* main */
+
+/* De showcase afbeelding*/
+#shop > main section:first-of-type img {
+   width: 100%;
+   height: 170px;
+}
+
+
+
+/* Office*/
+#shop main section:nth-of-type(2) h1 {
+  color: #1E2D7D;
+  font-family: montserrat;
+  margin: 1em 0 .5em .8em;
+}
+
+/* 9 products */
+ #shop main section:nth-of-type(2) p {
+  color: #677279;
+  font-family: montserrat;
+  margin: 1em 0 3em 1.7em;
+  font-size: 12px;
+}
+
+/* De bar met de filter opties*/
+#shop main section:nth-of-type(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+}
+
+/* De lijnen boven en onder de filter opties*/
+#shop hr {
+  width: 100%;
+margin: 0;
+height: .1em;
+background-color: lightgrey;
+}
+
+/* De knoppen in de fiter balk */
+#shop main section:nth-of-type(3) button {
+  border: none;
+  appearance: none;
+  background: none;
+  cursor: pointer;
+  margin: .4em 3em .4em 2em;
+  color: #677279;
+  text-align: center;
+}
+
+
+/* derde button in de filter balk (overzicht instelling)*/
+#shop main section:nth-of-type(3) button:nth-of-type(3) {
+margin-right: 0;
+margin-left: 3em;
+
+}
+
+/*vierde button in de filter balk (overzicht instelling) */
+#shop main section:nth-of-type(3) button:nth-of-type(4){
+  margin-right: 0;
+  margin-left: 1.3em;
+}
+
+/* derde en vierde button in de filter balk (overzicht instelling) */
+#shop main section:nth-of-type(3) button img {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+/* filter menu  ingeklapt */
+/*
+#shop main section:nth-of-type(3) ul:first-of-type {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .8s;
+  pointer-events: none;
+}
+
+  Het filter menu wanneer het uitgeklapt is 
+#shop main section:nth-of-type(3) ul:first-of-type {
+  background-color: red;
+  position: fixed;
+  top: 390px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  transition: .3s;
+  pointer-events: none;
+}
+*/
+
+/* Alle producten */
+#shop section:nth-of-type(4) {
+  height: 26em;
+  margin-bottom: 10em;
+  width: 100%;
+}
+
+/* De gehele lijst met producten */
+#shop section:nth-of-type(4) ul {
+  display: flex;
+}
+
+/* De verschillende producten in de lijst */
+#shop section:nth-of-type(4) ul li {
+  width: 50%;
   flex-shrink: 0;
   background-color: white;
   border: 1px solid lightgrey;
   flex-shrink: 0;
+  height: 20em;
 }
 
-hr:last-of-type {
-  width: 100%;
+/* Product afbeeldingen */
+#shop section:nth-of-type(4) img {
+  width: 8em;
+  margin: 1em;
+  margin-top: 3em;
+}
+
+/*  Trendfactory*/
+#shop section:nth-of-type(4) p:first-of-type {
+  color: grey;
+  margin-left: 1em;
+  font-size: 13px;
+}
+
+/* Naam van het product */
+#shop section:nth-of-type(4) p:nth-of-type(2) {
+  color: #1E2D7D;
+  margin-left: 1em;
+  margin-top: .7em;
+  font-size: 13px;
+  font-family: poppins;
+}
+
+/* De prijs */
+#shop section:nth-of-type(4) p:last-of-type {
+  margin-left: .8em;
+  margin-top: .7em;
+  color: #00BADB;
+}
+
+/* Recently viewed (titel) */
+#shop section:nth-of-type(5) h2 {
+  color: #1E2D7D;
+  font-family: sans-serif;
+  margin-top: 48em;
+  margin-left: 1em;
+  font-size: 19px;
+}
+
+  /* Recently viewed */
+#shop section:nth-of-type(6) {
+  margin: 1em;
+  height: 26em;
+  margin-bottom: 10em;
+}
+
+/* De gehele lijst van recenlty viewed */
+#shop section:nth-of-type(6) ul {
+  display: flex;
+  overflow-x: auto;
+}
+
+/* De producten in de lijst */
+#shop section:nth-of-type(6) ul li {
+  flex-shrink: 0;
+  background-color: white;
+  border: 1px solid lightgrey;
+  flex-shrink: 0;
+  height: 26em;
+}
+
+/* product afbeeldingen */
+#shop section:nth-of-type(6) img {
+  width: 12em;
+  margin: 1em;
+}
+
+/* save 15,00 (rode achtergrond) */
+#shop section:nth-of-type(6) p:first-of-type {
+  text-align: center;
+  background-color: red;
+  font-family: poppins;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 13px;
+  margin-top: 1em;
+  width: 10em;
+  padding: .1em;
+}
+
+/*  Trendfactory*/
+#shop section:nth-of-type(6) p:nth-of-type(2) {
+  color: grey;
+  margin-left: 1em;
+  font-size: 13px;
+}
+
+/* Naam van he product */
+#shop section:nth-of-type(6) p:nth-of-type(3) {
+  color: #1E2D7D;
+  margin-left: 1em;
+  margin-top: .7em;
+  font-size: 13px;
+  font-family: poppins;
+}
+
+/* De prijs */
+#shop section:nth-of-type(6) p:last-of-type {
+  margin-left: .8em;
+  margin-top: .7em;
+}
+
+/* de prijs in de rode kleur */
+#shop section:nth-of-type(6) p:last-of-type span:first-of-type {
   color: red;
+  font-size: 17px;
+}
+
+/* de prijs in de grijze kleur */
+#shop section:nth-of-type(6) p:last-of-type span:last-of-type {
+  color: grey;
+  margin-left: 1em;
+  font-size: 13px;
+  text-decoration-line: line-through;
 }

@@ -11,200 +11,243 @@
 	<link href="styles/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="home">
+
 	<header>
 		<!-- Top bar -->
-		<section>
-		<h6> &#x2713; Free worldwide shipping</h6>
-
+		  <p> &#x2713; Free worldwide shipping </p>
     <!-- Navigatie bar -->
-		</section>
-
-	  <nav>
-		  <button type="button" name="hamburger_menu"><img src="images/menu.png" alt="Hamburger menu"> </button>
-		  <a href="index.html">
+	    <nav>
+				<!-- Trend Factory Logo -->
+				<a href="index.html">
 		    <img class="logo" src="images/logo.JPG" alt="Logo trend factory">
-		  </a>
-	   	<ul>
-			  <li><a href="#"><img src="images/search.svg" alt="zoek knop"></a></li>
-			  <li><a href="#"><img  src="images/account.svg" alt="account knop"></a></li>
-			  <li><a href="#"><img src="images/cart.svg" alt="winkelwagen knop"></a></li>
-		  </ul>
-	  </nav>
+		    </a>
+				<!-- Hamburger menu knop -->
+				<button aria-label="Dit dit is de menu knop" class="menu-btn">
+        <span></span>
+        </button>
+				<!-- het volledige menu wanneer er op de hamburger knop wordt geklikt -->
+				<ul>
+					<li><a href="#">Products</a></li>
+					<li><a href="#">New Arrivals</a></li>
+					<li><a href="#">Collection</a></li>
+					<li><a href="shop.html">Shop</a></li>
+					<li><a href="#">Contact</a></li>
+					<li> <hr> </li>
+				</ul>
+				<!-- Zoeken, account en winkelwaken -->
+	   	  <ul>
+			    <li><button class="search-btn" type="button" name="seachr-btn"><img src="images/search.svg" alt="zoek knop"></button></li>
+			    <li><button type="button" name="account-btn"><img  src="images/account.svg" alt="account knop"></button></li>
+			    <li><button type="button" name="cart-btn"><img src="images/cart.svg" alt="winkelwagen knop"></button></li>
+		    </ul>
+				<form class="" action="index.html" method="post">
+	       <input type="text" name="search" value=" search...">
+				 <a href="shop.html">&#128269;</a>
+				</form>
+	    </nav>
   </header>
 
-<main>
+  <main>
+      <!-- De showcase met een afbeelding en teskt er in -->
+      <section>
+        <h1> Introducing: The Home Office Collection</h1>
+        <p> Optimize your working space to get things done!</p>
+			  <a href="shop.html"> Shop Now </a>
+      </section>
 
-   <section>
-      <h1> Introducing: The Home Office Collection</h1>
-      <p> Optimize your working space to get things done!</p>
-			<a href="shop.html"> Shop Now </a>
-  </section>
+			<!-- De verschillende collecties naast elkaar -->
+      <section aria-label= "Hier staan de verschillende collections weergeven">
+        <!-- De lijst met de collecties -->
+        <ul>
+					<!-- li item 1 gadgets -->
+	        <li aria-label= "gadgets">
+		        <h4>Gadgets</h4>
+		        <p>Our pick of the best new tech for 2021</p>
+		        <a href="shop.html">Shop Now</a>
+	        </li>
+          <!-- li item 2 Pets -->
+	        <li aria-label= "Pets">
+		        <h4>Pets</h4>
+		        <p>Everything for your furry friend</p>
+		        <a href="shop.html">Shop Now</a>
+	        </li>
+          <!-- li item 3 Cleaning -->
+	        <li aria-label= "Cleaning">
+		        <h4>Cleaning</h4>
+		        <p>You don't get anything clean without getting something else dirty</p>
+		        <a href="shop.html">Shop Now</a>
+	        </li>
+        </ul>
+      </section>
 
-<!-- De drie promo boxen -->
+    <!-- Featured collections titel -->
+      <section aria-label= "Featured collection">
+	     <h2>Featured colletion</h2>
+	     <a href="shop.html">View all</a>
+      </section>
 
-<section>
-<ul>
-	<li>
-		<h4>Gadgets</h4>
-		<p>Our pick of the best new tech for 2021</p>
-		<a href="shop.html">Shop Now</a>
-	</li>
+      <!-- De featured collections -->
+	    <section>
+     <!-- Alle collections -->
+	      <ol>
+					<!-- New tech -->
+		      <li>
+		        <h4>New Tech</h4>
+		        <p>Stay connected with the latest trends</p>
+		        <a href="shop.html">Shop Now</a>
+		      </li>
+          <!-- Garden -->
+          <li aria-label= "Garden">
+		        <h4>Garden</h4>
+			      <p>There are no gardening mistakes, only experiments</p>
+			      <a href="shop.html">Shop Now</a>
+		      </li>
+          <!-- Outdoor -->
+		      <li aria-label= "Outdoor">
+			      <h4>Outdoor</h4>
+		   	    <p>Gear to keep you going</p>
+			      <a href="shop.html">Shop Now</a>
+		      </li>
+          <!-- Accessories -->
+	        <li aria-label= "Accessories">
+			      <h4>Accessories</h4>
+			      <p>Various accessories to have the best experience</p>
+			      <a href="shop.html">Shop Now</a>
+		      </li>
+          <!-- Beauty Accessories -->
+		      <li aria-label= "Beauty Accessories">
+			      <h4>Beauty-accessories</h4>
+			      <p>Get organized</p>
+			      <a href="shop.html">Shop Now</a>
+          </li>
+       </ol>
+	   </section>
 
-	<li>
-		<h4>Gadgets</h4>
-		<p>Our pick of the best new tech for 2021</p>
-		<a href="shop.html">Shop Now</a>
-	</li>
-
-	<li>
-		<h4>Gadgets</h4>
-		<p>Our pick of the best new tech for 2021</p>
-		<a href="shop.html">Shop Now</a>
-	</li>
-
-</ul>
-</section>
-
-<!-- Featured collections titel -->
-  <section>
-	  <h2>Featured colletion</h2>
-	  <a href="shop.html">View all</a>
-  </section>
-
-
-<!-- De featured collections -->
-	<section>
-
-	<ol>
-		<li>
-		  <h4>New Tech</h4>
-		  <p>Stay connected with the latest trends</p>
-		  <a href="shop.html">Shop Now</a>
-		</li>
-
-
-    <li>
-			<h4>Garden</h4>
-			<p>There are no gardening mistakes, only experiments</p>
-			<a href="shop.html">Shop Now</a>
-		</li>
+    <!-- featured product titel -->
+    <section aria-label= "Featured Product">
+	    <h2>Featured product</h2>
+	    <a href="shop.html">View all</a>
+    </section>
 
 
-		<li>
-			<h4>Outdoor</h4>
-			<p>Gear to keep you going</p>
-			<a href="shop.html">Shop Now</a>
-		</li>
+    <!-- Featured product -->
+	  <section aria-label= "Pet Hair Removal Broom">
+			<!-- Foto van product -->
+		  <img src="images/broom.jpg" alt="">
+      <!-- verschillende foto's van het product -->
+		  <ul>
+			  <li><button type="button" name="button"> <img src="images/thumb1.jpg" alt=""> </button></li>
+			  <li><button type="button" name="button"> <img src="images/thumb2.jpg" alt=""> </button></li>
+			  <li><button type="button" name="button"> <img src="images/thumb3.jpg" alt=""> </button></li>
+			  <li><button type="button" name="button"> <img src="images/thumb4.jpg" alt=""> </button></li>
+			  <li><button type="button" name="button"> <img src="images/broom.jpg" alt=""> </button></li>
+		  </ul>
+      <!-- omschrijving van het product -->
+      <h2>TF© Pet Hair Removal Broom</h2>
+		  <h3>★★★★★ <span>(90)</span></h3>
+		  <p>Save €15,00 EUR</p>
+		  <a href="shop.html">TREND FACTORY</a>
+		  <hr>
+		  <h6>Color: aangwezen kleur</h6>
+      <!-- Kleuren knoppen opties van het product -->
+		  <ul>
+			  <li><button type="button" name="button">Blue</button></li>
+			  <li><button type="button" name="button">Yellow</button></li>
+			  <li><button type="button" name="button">Red</button></li>
+			  <li><button type="button" name="button">Orange</button></li>
+			  <li><button type="button" name="button">Green</button></li>
+			  <li><button type="button" name="button">Black</button></li>
+		  </ul>
+      <!-- De prijs en de prijs door gestreept -->
+      <h6>Price: <span>€29,95 EUR</span><span>€44,95 EUR</span></h6>
+      <!-- De dropdown voor de hoeveelheid -->
+      <div class="dropdown">
+        <h6>Quantity: </h6>
+		    <select  name="quantity">
+			    <option disabled selected>1</option>
+			    <option value="2">2</option>
+			    <option value="3">3</option>
+			    <option value="4">4</option>
+			    <option value="5">5</option>
+			    <option value="6">6</option>
+			    <option value="7">7</option>
+			    <option value="8">8</option>
+		     </select>
+		  </div>
 
-	  <li>
-			<h4>Accessories</h4>
-			<p>Various accessories to have the best experience</p>
-			<a href="shop.html">Shop Now</a>
-		</li>
-
-		<li>
-			<h4>Beauty-accessories</h4>
-			<p>Get organized</p>
-			<a href="shop.html">Shop Now</a>
-    </li>
-  </ol>
+      <!-- Add to cart knop -->
+		  <button type="button" name="add to cart">Add to cart</button>
+			<!-- Met paypal kopen link -->
+      <a href="shop.html">Buy with Paypal</a>
+			<!-- Andere betaal methoden knop -->
+		  <a href="shop.html">More payment options</a>
 	</section>
 
-<!-- featured product titel -->
-	<section>
-	  <h2>Featured product</h2>
-	  <a href="shop.html">View all</a>
-  </section>
-
-	<section>
-		<img src="images/broom.jpg" alt="">
-
-		<ul>
-			<li><button type="button" name="button"> <img src="images/thumb1.jpg" alt=""> </button></li>
-			<li><button type="button" name="button"> <img src="images/thumb2.jpg" alt=""> </button></li>
-			<li><button type="button" name="button"> <img src="images/thumb3.jpg" alt=""> </button></li>
-			<li><button type="button" name="button"> <img src="images/thumb4.jpg" alt=""> </button></li>
-			<li><button type="button" name="button"> <img src="images/broom.jpg" alt=""> </button></li>
-		</ul>
-
-    <h2>TF© Pet Hair Removal Broom</h2>
-		<h3>★★★★★ <span>(90)</span></h3>
-		<p>Save €15,00 EUR</p>
-		<a href="shop.html">TREND FACTORY</a>
-		<hr>
-		<h6>Color: aangwezen kleur</h6>
-
-		<ul>
-			<li><button type="button" name="button">Blue</button></li>
-			<li><button type="button" name="button">Yellow</button></li>
-			<li><button type="button" name="button">Red</button></li>
-			<li><button type="button" name="button">Orange</button></li>
-			<li><button type="button" name="button">Green</button></li>
-			<li><button type="button" name="button">Black</button></li>
-		</ul>
-
-    <h6>Price: <span>€29,95 EUR</span><span>€44,95 EUR</span></h6>
-
-   <div class="dropdown">
-    <h6>Quantity: </h6>
-		<select  name="quantity">
-			<option disabled selected>1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8">8</option>
-		</select>
-		</div>
-
-
-		<button id="addtocart" type="button" name="add to cart">Add to cart</button>
-    <a href="shop.html">Buy with Paypal</a>
-		<a href="shop.html">More payment options</a>
-	</section>
-
-	<section>
+	<!-- recenlty viewed titel -->
+	<section aria-label= "Recently viewed">
 	  <h2>Recently viewed</h2>
   </section>
 
+	<!-- De recently viewed producten -->
 	<section>
 		<ul>
-			<li>
+			<!-- Product 1 -->
+			<li aria-label= "Baby footprint kit">
 				<p>Save €15,00 EUR</p>
         <img src="images/babykit.jpg" alt="">
 				<p>Trendfactory</p>
 				<p>Baby Foot/Handprint Kit</p>
 				<p><span>€20,00 EUR</span><span>€30,00 EUR</span></p>
 			</li>
-
-			<li>
+     	<!-- Product 2 -->
+			<li aria-label= "Pigment Acryl Pait Set">
 				<p>Save €15,00 EUR</p>
 				<img src="images/acryl.jpg" alt="">
 				<p>Trendfactory</p>
-				<p>Baby Foot/Handprint Kit</p>
+				<p>Pigment Acryl Pait Set</p>
 				<p><span>€20,00 EUR</span><span>€30,00 EUR</span></p>
 			</li>
-			<li>
+     	<!-- Product 3 -->
+			<li aria-label= "The Christmas Wonder Lights">
 				<p>Save €15,00 EUR</p>
 				<img src="images/leds.png" alt="">
 				<p>Trendfactory</p>
-				<p>Baby Foot/Handprint Kit</p>
+				<p>The Christmas Wonder Lights</p>
 				<p><span>€20,00 EUR</span><span>€30,00 EUR</span></p>
 			</li>
 		</ul>
 	</section>
 
-	<footer>
-		<hr>
+</main>
 
+  	<!-- De footer -->
+	<footer>
+		<!-- De lijn boven de navigatie om de footer mee te starten -->
+		<hr>
+		<!-- De Navigatie knop -->
+    <button type="button" name="button">NAVIGATION</button>
+		<!-- De lijn onder de navigatie om hiermee af t sluiten -->
+		<hr>
+		<!-- De about knop -->
+		<button type="button" name="button">ABOUT TREND FACTORY</button>
+		<!-- De lijn om de about nop mee af te sluiten -->
+		<hr>
+		<!-- De titel van de newsletter -->
+		<h6>NEWSLETTER</h6>
+		<!-- Uitleg bij de newsletter -->
+		<p>Stay up to date on great deals, innovative products, and engaging articles.</p>
+		<!-- Het invul veld van de newsletter -->
+		<input type="email" name="NEWSLETTER" value="" placeholder="Your Email">
+		<!-- De abboneer knop van de newsletter -->
+		<button type="button" name="button">Subscribe</button>
+		<!-- Copyrigth -->
+		<p>©Trend Factory</p>
+		<p>Powerd by Shopify</p>
 	</footer>
 
 
 
-</main>
 
 	<script src="scripts/script.js"></script>
 </body>
