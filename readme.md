@@ -2,6 +2,8 @@
   Ik heb 2 pagina's van mijn website afgerond en een aantal micro interacties toegevoegd. Ik heb een transitie in het hamburger menu die van vorm veranderd, een pop up menu en een uitschuivende zoekbalk. Ik zou er graag nog meer willen doen maar dat is neit gelukt voor de deadline, in mijn eigen tijd ga ik hier nog wel mee verder omdat ik de opdracht achteraf toch wel leuk vondt. Ik begin altijd vrij stroef met nieuwe onderwerpen binnen html, css en javascript maar als het eenmaal lukt gaat alles vrij soepel door. Hieronder zijn nog wat screensshots van de website te zien. Ik ben in totaal best lang bezig geweest met het gehele process omdat ik veel dingen opnieuw moest uitvinden maar dit was wel weer een goede opfrisser voor mijn kennis over html, css en JavaScript.
 
   **Screenshot(s):**
+  
+  
   <img src="images/menu.JPG">
 
   <img src="images/zoekbalk.JPG">
