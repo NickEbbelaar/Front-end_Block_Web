@@ -105,3 +105,13 @@ Nu nog maar een klein beetje HTML CSS van het het eerste gedeelte van de website
 **Screenshot(s) van de tweede pagina (sma4ll screen):**
 
 <img src="images/trendfactory_productpage.JPG">
+
+
+
+# Bronnen
+
+Alle afbeeldingen in mijn website komen van https://trendfactory.store/
+
+Veel van mijn positioneringen met flex heb ik van de vogende codepen: https://codepen.io/shooft/pen/qBZPdGm
+
+Van de volgende video heb ik gebruikt gemaakt voor mijn hamburger menu: https://www.youtube.com/watch?v=dIyVTjJAkLw&t=161s&ab_channel=codeSTACKr
